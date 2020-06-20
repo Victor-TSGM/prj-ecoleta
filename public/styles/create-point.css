@@ -1,0 +1,159 @@
+#page-create-point {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#page-create-point header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px;
+}
+
+#page-create-point header a{
+    color: var(--title-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+#page-create-point header a span {
+    margin-right: 16px;
+    background-image: url("../assets/icones/arrow-left.svg");
+    width: 20px;
+    height: 23px;
+    display: flex;
+}
+
+form {
+    background-color: white;
+    padding: 64px;
+    margin-top: 80px;
+    border-radius: 8px;
+    max-width: 730px;
+    
+}
+
+fomr h1 {
+    font-size: 36px;
+}
+
+form fieldset {
+    margin-top: 64px;
+    border: 0; /*retira borda lateral*/
+}
+
+form legend {
+    margin-bottom: 40px; /*separa da margem*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+}
+
+form legend h2 {
+    font-size: 24px;
+}
+
+form legend span {
+    font-size: 14px;
+    color: var(--title-color);
+
+}
+
+form .field {
+    flex: 1;
+    display: flex; /*coloca os elementos um ao lado do outro*/
+    flex-direction: column; /*agrupa em coluna ajustando no espaço*/
+    margin-bottom: 24px;
+
+}
+
+form .field-group {
+    display: flex;
+
+}
+
+form input, form select { /*com a virgula pode aplicar as propriedades em dois elementos*/
+    background-color: #f0f0f5;
+    border:0; /*tira a borda preta padrao*/
+    padding: 16px 24px;
+    font-size: 16px;
+    outline-color: rgb(211, 228, 233); /*retira a borda apos clicar*/
+    border-radius: 8px;
+
+}
+
+form select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form .field-group .field + .field { /*pega um grup que contenha dois field*/
+    margin-left: 24px;
+}
+
+form button { 
+    background-color: var(--primary-color);
+    width: 300px;
+    height: 70px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'ubuntu', sans-serif;
+    color: white;
+    transition: background-color 400ms; /*suavisa a animação*/
+    margin-top: 40px;
+}
+
+form button:hover {
+    
+    background-color: hsl(145, 89%, 31%);
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.items-grid li {
+    background-color: #e4dcdce5;
+    list-style: none;
+    border: 2px solid #e4dcdce5;
+    border-radius: 8px;
+    height: 180px;
+    padding: 32px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    cursor: pointer;
+}
+
+.items-grid li span{
+    margin-top: 12px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: var(--title-color);
+}
+
+.items-grid li.selected {
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img,
+.items-grid li span {
+    pointer-events: none; /*impede que recebam clicks*/
+}
